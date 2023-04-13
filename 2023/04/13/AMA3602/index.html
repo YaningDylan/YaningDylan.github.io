@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="AMA3602Chapter 1: Simple linear Regression1. Model$$y &#x3D; \beta_0 + \beta_1 x + \varepsilon$$ 1.1 Assumption for SLR Linearity     Unbiased system  $E(\varepsilon) &#x3D; 0$ $\varepsilon \sim N(0,\">
+  <meta name="description" content="AMA3602Chapter 1: Simple linear Regression1. Model y &#x3D; \beta_0 + \beta_1 x + \varepsilon1.1 Assumption for SLR Linearity     Unbiased system  $E(\varepsilon) &#x3D; 0$ $\varepsilon \sim N(0,\sigma^2)$    E">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AMA3602">
 <meta property="og:url" content="http://example.com/2023/04/13/AMA3602/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="AMA3602Chapter 1: Simple linear Regression1. Model$$y &#x3D; \beta_0 + \beta_1 x + \varepsilon$$ 1.1 Assumption for SLR Linearity     Unbiased system  $E(\varepsilon) &#x3D; 0$ $\varepsilon \sim N(0,\">
+<meta property="og:description" content="AMA3602Chapter 1: Simple linear Regression1. Model y &#x3D; \beta_0 + \beta_1 x + \varepsilon1.1 Assumption for SLR Linearity     Unbiased system  $E(\varepsilon) &#x3D; 0$ $\varepsilon \sim N(0,\sigma^2)$    E">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="c:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230201192119290.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230201192241837.png">
@@ -241,23 +241,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="AMA3602"><a href="#AMA3602" class="headerlink" title="AMA3602"></a>AMA3602</h1><h2 id="Chapter-1-Simple-linear-Regression"><a href="#Chapter-1-Simple-linear-Regression" class="headerlink" title="Chapter 1: Simple linear Regression"></a>Chapter 1: Simple linear Regression</h2><h3 id="1-Model"><a href="#1-Model" class="headerlink" title="1. Model"></a>1. Model</h3><p>$$<br>y &#x3D; \beta_0 + \beta_1 x + \varepsilon<br>$$</p>
-<h4 id="1-1-Assumption-for-SLR"><a href="#1-1-Assumption-for-SLR" class="headerlink" title="1.1 Assumption for SLR"></a>1.1 Assumption for SLR</h4><ol>
+        <h1 id="AMA3602"><a href="#AMA3602" class="headerlink" title="AMA3602"></a>AMA3602</h1><h2 id="Chapter-1-Simple-linear-Regression"><a href="#Chapter-1-Simple-linear-Regression" class="headerlink" title="Chapter 1: Simple linear Regression"></a>Chapter 1: Simple linear Regression</h2><h3 id="1-Model"><a href="#1-Model" class="headerlink" title="1. Model"></a>1. Model</h3><script type="math/tex; mode=display">
+y = \beta_0 + \beta_1 x + \varepsilon</script><h4 id="1-1-Assumption-for-SLR"><a href="#1-1-Assumption-for-SLR" class="headerlink" title="1.1 Assumption for SLR"></a>1.1 Assumption for SLR</h4><ol>
 <li><p>Linearity</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230201192119290.png" alt="image-20230201192119290" style="zoom: 33%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230201192119290.png" alt="image-20230201192119290" style="zoom: 33%;" /></p>
 </blockquote>
 </li>
 <li><p>Unbiased system</p>
 <blockquote>
-<p>$E(\varepsilon) &#x3D; 0$</p>
+<p>$E(\varepsilon) = 0$</p>
 <p>$\varepsilon \sim N(0,\sigma^2)$</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230201192241837.png" alt="image-20230201192241837" style="zoom:33%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230201192241837.png" alt="image-20230201192241837" style="zoom:33%;" /></p>
 </blockquote>
 </li>
 <li><p>Errors are independent</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230201192717559.png" alt="image-20230201192717559" style="zoom: 50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230201192717559.png" alt="image-20230201192717559" style="zoom: 50%;" /></p>
 </blockquote>
 </li>
 <li><p>Errors follows normal distribution</p>
@@ -281,27 +281,36 @@
 <h5 id="Target-1-Estimation-of-beta-0-and-beta-1"><a href="#Target-1-Estimation-of-beta-0-and-beta-1" class="headerlink" title="Target 1 : Estimation of $\beta_0$ and $\beta_1$"></a>Target 1 : Estimation of $\beta_0$ and $\beta_1$</h5><ul>
 <li><p>method : <strong>Least-squares estimation (LSE)</strong></p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230201195539516.png" alt="image-20230201195539516" style="zoom: 50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230201195539516.png" alt="image-20230201195539516" style="zoom: 50%;" /></p>
 </blockquote>
 </li>
 <li><p>estimator : <strong>$\hat \beta_0$</strong> and <strong>$\hat \beta_1$</strong></p>
 </li>
 <li><p>process</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205231503196.png" alt="image-20230205231503196" style="zoom:50%;" />
-
-<p>Therefore, the <strong>least-squares normal equations</strong> are<br>$$<br>\begin{align}<br>n \hat \beta_0 + \hat \beta_1 \sum^n_{i&#x3D;1}x_i &amp;&#x3D; \sum^n_{i&#x3D;1}y_i\<br>\hat \beta_0 \sum^n_{i&#x3D;1} x_i + \hat\beta_1 \sum^n_{i&#x3D;1} x^2_i &amp;&#x3D; \sum_{i&#x3D;1}^n y_i x_i<br>\end{align}<br>$$</p>
-</blockquote>
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205231503196.png" alt="image-20230205231503196" style="zoom:50%;" /></p>
+<p>Therefore, the <strong>least-squares normal equations</strong> are</p>
+<script type="math/tex; mode=display">
+\begin{align}
+n \hat \beta_0 + \hat \beta_1 \sum^n_{i=1}x_i &= \sum^n_{i=1}y_i\\
+\hat \beta_0 \sum^n_{i=1} x_i + \hat\beta_1 \sum^n_{i=1} x^2_i &= \sum_{i=1}^n y_i x_i
+\end{align}</script></blockquote>
 </li>
-<li><p>solution<br>$$<br>\hat{\beta}<em>1&#x3D;\frac{S</em>{x y}}{S_{x x}}&#x3D;\left(\frac{S_{x y} &#x2F; n}{S_{x x} &#x2F; n}\right)\[6pt]<br>\hat{\beta}_0&#x3D;\bar y - \hat\beta_1\bar x \[6pt]<br>$$</p>
-</li>
-<li><p>Additional formula<br>$$<br>\bar{y}&#x3D;\frac{1}{n} \sum_{i&#x3D;1}^n y_i,\quad \bar{x}&#x3D;\frac{1}{n} \sum_{i&#x3D;1}^n x_i,\[6pt]<br>S_{x y}&#x3D;\sum_{i&#x3D;1}^n\left(y_i-\bar{y}\right)\left(x_i-\bar{x}\right)&#x3D;\sum_{i&#x3D;1}^n y_i\left(x_i-\bar{x}\right)\[6pt]<br>S_{x x}&#x3D;\sum_{i&#x3D;1}^n\left(x_i-\bar{x}\right)^2<br>$$</p>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\hat{\beta}_1=\frac{S_{x y}}{S_{x x}}=\left(\frac{S_{x y} / n}{S_{x x} / n}\right)\\[6pt]
+\hat{\beta}_0=\bar y - \hat\beta_1\bar x \\[6pt]</script></li>
+<li><p>Additional formula</p>
+<script type="math/tex; mode=display">
+\bar{y}=\frac{1}{n} \sum_{i=1}^n y_i,\quad \bar{x}=\frac{1}{n} \sum_{i=1}^n x_i,\\[6pt]
+S_{x y}=\sum_{i=1}^n\left(y_i-\bar{y}\right)\left(x_i-\bar{x}\right)=\sum_{i=1}^n y_i\left(x_i-\bar{x}\right)\\[6pt]
+S_{x x}=\sum_{i=1}^n\left(x_i-\bar{x}\right)^2</script></li>
+</ul>
 <ul>
 <li><p>Proof of $S_{xy}$ and $S_{xx}$</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimageimage-20230201201759181.png" alt="image-20230201201759181" style="zoom:50%;" /></blockquote>
-</li>
-</ul>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimageimage-20230201201759181.png" alt="image-20230201201759181" style="zoom:50%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h5 id="Target-2-Estimation-of-sigma-2"><a href="#Target-2-Estimation-of-sigma-2" class="headerlink" title="Target 2 : Estimation of $\sigma^2$"></a>Target 2 : Estimation of $\sigma^2$</h5><blockquote>
@@ -310,177 +319,214 @@
 <ul>
 <li><p>Condition</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155644767.png" alt="image-20230205155644767" style="zoom:33%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155644767.png" alt="image-20230205155644767" style="zoom:33%;" /></p>
 </blockquote>
 </li>
 <li><p>estimator: <strong>$\sigma^2$</strong></p>
 </li>
 <li><p>process:</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205161121820.png" alt="image-20230205161121820" style="zoom:50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205161121820.png" alt="image-20230205161121820" style="zoom:50%;" /></p>
 </blockquote>
 </li>
-<li><p>solution<br>$$<br>\sigma^2 &#x3D; \frac{SS_{Res}}{n-2} &#x3D; MS_{Res}<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\sigma^2 = \frac{SS_{Res}}{n-2} = MS_{Res}</script></li>
 <li><p>Additional formula</p>
 <ul>
 <li><p><strong>Residual sum of squares</strong> : <strong>$SS_{Res}$</strong></p>
 </li>
 <li><p><strong>Residual mean square</strong> :  <strong>$MS_{Res}$</strong></p>
 </li>
-<li><p><strong>standard error of regression</strong> : <strong>$\sigma^2$</strong><br>$$<br>\sigma^2 &#x3D; MS_{Res} &#x3D; \frac{SS_{Res}}{n-2} \[6pt]<br>SS_{Res}&#x3D; \sum^n_{i&#x3D;1}e_i^2 &#x3D;\sum_{i&#x3D;1}^n(y_i-\hat y_i)^2<br>$$</p>
-</li>
+<li><p><strong>standard error of regression</strong> : <strong>$\sigma^2$</strong></p>
+<script type="math/tex; mode=display">
+\sigma^2 = MS_{Res} = \frac{SS_{Res}}{n-2} \\[6pt]
+SS_{Res}= \sum^n_{i=1}e_i^2 =\sum_{i=1}^n(y_i-\hat y_i)^2</script></li>
 </ul>
 </li>
 </ul>
 <h5 id="Target-3-Hypothesis-Testing-on-beta-0-and-beta-1"><a href="#Target-3-Hypothesis-Testing-on-beta-0-and-beta-1" class="headerlink" title="Target 3 : Hypothesis Testing on $\beta_0$ and $\beta_1$"></a>Target 3 : Hypothesis Testing on $\beta_0$ and $\beta_1$</h5><ul>
 <li><p>condition</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162628300.png" alt="image-20230205162628300" style="zoom: 50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162628300.png" alt="image-20230205162628300" style="zoom: 50%;" /></p>
 </blockquote>
 </li>
 <li><p>Hypothesis</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162709142.png" alt="image-20230205162709142" style="zoom: 50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162709142.png" alt="image-20230205162709142" style="zoom: 50%;" /></p>
 </blockquote>
 </li>
 <li><p>process</p>
 <blockquote>
 <p>Q1:</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162842707.png" alt="image-20230205162842707" style="zoom:50%;" />
-
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162842707.png" alt="image-20230205162842707" style="zoom:50%;" /></p>
 <p>Q2:</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162859140.png" alt="image-20230205162859140" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162859140.png" alt="image-20230205162859140" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>Summary:</p>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162933477.png" alt="image-20230205162933477" style="zoom:67%;" /></li>
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162933477.png" alt="image-20230205162933477" style="zoom:67%;" /></p>
+</li>
 </ul>
 <h5 id="Target-4-Confidence-Interval-on-beta-0-beta-1-sigma-2-and-Mean-Response"><a href="#Target-4-Confidence-Interval-on-beta-0-beta-1-sigma-2-and-Mean-Response" class="headerlink" title="Target 4 : Confidence Interval on $\beta_0$,  $\beta_1$, $\sigma^2$ and Mean Response"></a>Target 4 : Confidence Interval on $\beta_0$,  $\beta_1$, $\sigma^2$ and Mean Response</h5><ol>
 <li><h6 id="Confidence-Interval-on-beta-0-and-beta-1"><a href="#Confidence-Interval-on-beta-0-and-beta-1" class="headerlink" title="Confidence Interval on $\beta_0$ and $\beta_1$"></a>Confidence Interval on $\beta_0$ and $\beta_1$</h6><ul>
 <li><p>condition</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>request : Confidence Interval on $\beta_0$ and $\beta_1$</p>
 </li>
 <li><p>process:</p>
 <blockquote>
-<p>$$<br>\hat \beta_1 \sim N\left(\beta_1,\frac{\hat \sigma^2}{S_{xx}}\right)\<br>\hat \beta_0 \sim N \left(\beta_0\ ,\  \hat \sigma^2\left(<br>\frac{1}{n}+\frac{\bar x^2}{S_{xx}}<br>\right)   \right)<br>$$</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185645963.png" alt="image-20230205185645963" style="zoom:50%;" />
+<script type="math/tex; mode=display">
+\hat \beta_1 \sim N\left(\beta_1,\frac{\hat \sigma^2}{S_{xx}}\right)\\
+\hat \beta_0 \sim N \left(\beta_0\ ,\  \hat \sigma^2\left(
+\frac{1}{n}+\frac{\bar x^2}{S_{xx}}
+\right)   \right)</script><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185645963.png" alt="image-20230205185645963" style="zoom:50%;" /></p>
 </blockquote>
 </li>
-<li><p>solution<br>$$<br>\text{Confidence interval on $\beta_1$ is}\<br>\hat{\beta}<em>1-t</em>{\alpha &#x2F; 2, n-2} \operatorname{se}\left(\hat{\beta}_1\right) \leq \beta_1 \leq \hat{\beta}<em>1+t</em>{\alpha &#x2F; 2, n-2} \operatorname{se}\left(\hat{\beta}_1\right)\<br>\text{Confidence interval on $\beta_0$ is}\<br>\hat{\beta}<em>0-t</em>{\alpha &#x2F; 2, n-2} \operatorname{se}\left(\hat{\beta}_0\right) \leq \beta_0 \leq \hat{\beta}<em>0+t</em>{\alpha &#x2F; 2, n-2} \operatorname{se}\left(\hat{\beta}_0\right)\<br>$$</p>
-</li>
-<li><p>additional fomula<br>$$<br>\operatorname{se}\left(\hat{\beta}<em>1\right) &#x3D; \sqrt{\frac{\hat \sigma^2}{S</em>{xx}}} &#x3D; \sqrt{\frac{MS_{Res}}{S_{xx}}} \<br>\operatorname{se}\left(\hat{\beta}<em>0\right) &#x3D; \sqrt{\hat \sigma^2\left(<br>\frac{1}{n}+\frac{\bar x^2}{S</em>{xx}}<br>\right)}<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\text{Confidence interval on $\beta_1$ is}\\
+\hat{\beta}_1-t_{\alpha / 2, n-2} \operatorname{se}\left(\hat{\beta}_1\right) \leq \beta_1 \leq \hat{\beta}_1+t_{\alpha / 2, n-2} \operatorname{se}\left(\hat{\beta}_1\right)\\
+\text{Confidence interval on $\beta_0$ is}\\
+\hat{\beta}_0-t_{\alpha / 2, n-2} \operatorname{se}\left(\hat{\beta}_0\right) \leq \beta_0 \leq \hat{\beta}_0+t_{\alpha / 2, n-2} \operatorname{se}\left(\hat{\beta}_0\right)\\</script></li>
+<li><p>additional fomula</p>
+<script type="math/tex; mode=display">
+\operatorname{se}\left(\hat{\beta}_1\right) = \sqrt{\frac{\hat \sigma^2}{S_{xx}}} = \sqrt{\frac{MS_{Res}}{S_{xx}}} \\
+\operatorname{se}\left(\hat{\beta}_0\right) = \sqrt{\hat \sigma^2\left(
+\frac{1}{n}+\frac{\bar x^2}{S_{xx}}
+\right)}</script></li>
 </ul>
 </li>
 <li><h6 id="Confidence-Interval-of-sigma-2"><a href="#Confidence-Interval-of-sigma-2" class="headerlink" title="Confidence Interval of $\sigma^2$"></a>Confidence Interval of $\sigma^2$</h6><ul>
 <li><p>condition</p>
 <blockquote>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>request : Confidence Interval of $\sigma^2$</p>
 </li>
 <li><p>process :</p>
 <blockquote>
-<p>$$<br>\frac{SS_{Res}}{\sigma^2} \sim \chi^2_{n-2}<br>$$</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205191304651.png" alt="image-20230205191304651" style="zoom:50%;" />
+<script type="math/tex; mode=display">
+\frac{SS_{Res}}{\sigma^2} \sim \chi^2_{n-2}</script><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205191304651.png" alt="image-20230205191304651" style="zoom:50%;" /></p>
 </blockquote>
 </li>
-<li><p>solution<br>$$<br>\text{Confidence Interval on }\sigma^2 \<br>\frac{(n-2)MS_{Res}}{\chi^2_{\alpha&#x2F;2,n-2}}\leq \sigma^2 \leq \frac{(n-2)MS_{Res}}{\chi^2_{1-\alpha&#x2F;2,n-2}}<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\text{Confidence Interval on }\sigma^2 \\
+\frac{(n-2)MS_{Res}}{\chi^2_{\alpha/2,n-2}}\leq \sigma^2 \leq \frac{(n-2)MS_{Res}}{\chi^2_{1-\alpha/2,n-2}}</script></li>
 </ul>
 </li>
 <li><h6 id="Interval-Estimation-of-the-Mean-Response"><a href="#Interval-Estimation-of-the-Mean-Response" class="headerlink" title="Interval Estimation of the Mean Response"></a>Interval Estimation of the Mean Response</h6><ul>
 <li><p>condition</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185445920.png" alt="image-20230205185445920" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>request : CI of $ \widehat{\mathrm{E}\left(y \mid x_0\right)}$</p>
 </li>
 <li><p>process : </p>
 <blockquote>
-<p>Because mean response follows:<br>$$<br>E(y|x_0)&#x3D;\mu_{y|x_0} \sim N\left(\hat \beta_0+\hat \beta_1x_0 \ ,\ \sigma^2 \left[\frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}} \right] \right)\<br>$$<br>Therefore,<br>$$<br>\frac{\hat \mu_{y|x_0} - \mathrm{E}\left(y | x_0\right)}<br>{\sqrt{MS_{Res}<br>\left( \frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}}<br>\right)<br>}} \sim t_{n-2}\<br>$$<br>Where,<br>$$<br>\hat \mu_{y|x_0} &#x3D; \hat \beta_0 + \hat \beta_1x_i<br>$$</p>
-</blockquote>
+<p>Because mean response follows:</p>
+<script type="math/tex; mode=display">
+E(y|x_0)=\mu_{y|x_0} \sim N\left(\hat \beta_0+\hat \beta_1x_0 \ ,\ \sigma^2 \left[\frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}} \right] \right)\\</script><p>Therefore,</p>
+<script type="math/tex; mode=display">
+\frac{\hat \mu_{y|x_0} - \mathrm{E}\left(y | x_0\right)}
+{\sqrt{MS_{Res}
+\left( \frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}}
+\right)
+}} \sim t_{n-2}\\</script><p>Where,</p>
+<script type="math/tex; mode=display">
+\hat \mu_{y|x_0} = \hat \beta_0 + \hat \beta_1x_i</script></blockquote>
 </li>
-<li><p>solution<br>$$<br>\hat{\mu}<em>{y \mid x_0}-t</em>{\alpha &#x2F; 2, n-2} \sqrt{M S_{R e s}\left(\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)} \leq \mathrm{E}\left(y \mid x_0\right)<br>\leq \hat{\mu}<em>{y \mid x_0}+t</em>{\alpha &#x2F; 2, n-2} \sqrt{M S_{R e s}\left(\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)}<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\hat{\mu}_{y \mid x_0}-t_{\alpha / 2, n-2} \sqrt{M S_{R e s}\left(\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)} \leq \mathrm{E}\left(y \mid x_0\right)
+\leq \hat{\mu}_{y \mid x_0}+t_{\alpha / 2, n-2} \sqrt{M S_{R e s}\left(\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)}</script></li>
 </ul>
 </li>
 </ol>
 <h5 id="Target-5-Prediction-of-New-Observation"><a href="#Target-5-Prediction-of-New-Observation" class="headerlink" title="Target 5 : Prediction of New Observation"></a>Target 5 : Prediction of New Observation</h5><ul>
 <li><p>condition :</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205195733438.png" alt="image-20230205195733438" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205195733438.png" alt="image-20230205195733438" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>request : the <strong>Prediction Interval</strong> on a <strong>future observation</strong> $x_0$</p>
 </li>
 <li><p>process : </p>
 <blockquote>
-<p>future observation value $y_0$ follows:<br>$$<br>y_0 \sim N\left(\hat y_0\ ,\ \sigma^2 \left[1+\frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}} \right] \right)\<br>\hat y_0 &#x3D; \hat \beta_0 + \hat \beta_1 x_0<br>$$<br><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205203508266.png" alt="image-20230205203508266" style="zoom: 33%;" /></p>
+<p>future observation value $y_0$ follows:</p>
+<script type="math/tex; mode=display">
+y_0 \sim N\left(\hat y_0\ ,\ \sigma^2 \left[1+\frac{1}{n} + \frac{(x_0-\bar x)^2}{S_{xx}} \right] \right)\\
+\hat y_0 = \hat \beta_0 + \hat \beta_1 x_0</script><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205203508266.png" alt="image-20230205203508266" style="zoom: 33%;" /></p>
 </blockquote>
 </li>
-<li><p>solution<br>$$<br>\hat{\mu}<em>{y \mid x_0}-t</em>{\alpha &#x2F; 2, n-2} \sqrt{M S_{R e s}\left(1+\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)} \leq \mathrm{E}\left(y \mid x_0\right) \leq \hat{\mu}<em>{y \mid x_0}+t</em>{\alpha &#x2F; 2, n-2} \sqrt{M S_{R e s}\left(1+\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)}<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\hat{\mu}_{y \mid x_0}-t_{\alpha / 2, n-2} \sqrt{M S_{R e s}\left(1+\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)} \leq \mathrm{E}\left(y \mid x_0\right) \leq \hat{\mu}_{y \mid x_0}+t_{\alpha / 2, n-2} \sqrt{M S_{R e s}\left(1+\frac{1}{n}+\frac{\left(x_0-\bar{x}\right)^2}{S_{x x}}\right)}</script></li>
 <li></li>
 </ul>
 <h3 id="2-Properties-of-SLR"><a href="#2-Properties-of-SLR" class="headerlink" title="2. Properties of SLR"></a>2. Properties of SLR</h3><ol>
 <li><h5 id="For-this-Model"><a href="#For-this-Model" class="headerlink" title="For this Model"></a>For this Model</h5><ul>
 <li><p>$\hat{\beta}_0$ and $\hat{\beta}_1$ are <strong>linear combinations</strong> of observations $y_i$</p>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205154849491.png" alt="image-20230205154849491" style="zoom:50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205154849491.png" alt="image-20230205154849491" style="zoom:50%;" /></p>
 </li>
 <li><p>$\hat{\beta}_0$ and $\hat{\beta}_1$ are <strong>unbiased estimators</strong></p>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205154954237.png" alt="image-20230205154954237" style="zoom:50%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205154954237.png" alt="image-20230205154954237" style="zoom:50%;" /></p>
 </li>
 <li><p>The conditional <strong>Variance</strong> of $\hat{\beta}_0$ and $\hat{\beta}_1$ are </p>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155047923.png" alt="image-20230205155047923" style="zoom:50%;" /></li>
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155047923.png" alt="image-20230205155047923" style="zoom:50%;" /></p>
+</li>
 </ul>
 </li>
 <li><h5 id="Residual"><a href="#Residual" class="headerlink" title="Residual"></a>Residual</h5><blockquote>
-<p>Defined as<br>$$<br>e_i &#x3D; y_i - \hat y_i,\quad i&#x3D;1,…,n<br>$$</p>
-</blockquote>
+<p>Defined as</p>
+<script type="math/tex; mode=display">
+e_i = y_i - \hat y_i,\quad i=1,...,n</script></blockquote>
 <p>properties:</p>
-<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155441838.png" alt="image-20230205155441838" style="zoom: 67%;" />
+<p><img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205155441838.png" alt="image-20230205155441838" style="zoom: 67%;" /></p>
 </li>
 <li><h5 id="Gauss-Markov-theorem"><a href="#Gauss-Markov-theorem" class="headerlink" title="Gauss-Markov theorem"></a>Gauss-Markov theorem</h5><blockquote>
-<p> For the regression model with the assumptions $E(\varepsilon_i) &#x3D; 0$, $Var(\varepsilon_i) &#x3D; \sigma^2$ and <strong>uncorrelated</strong> errors, the least-squares estimators are <strong>unbiased</strong> and have <strong>minimum variance</strong> when compared with all other unbiased estimators that are linear combinations of the $y_i$.</p>
+<p> For the regression model with the assumptions $E(\varepsilon_i) = 0$, $Var(\varepsilon_i) = \sigma^2$ and <strong>uncorrelated</strong> errors, the least-squares estimators are <strong>unbiased</strong> and have <strong>minimum variance</strong> when compared with all other unbiased estimators that are linear combinations of the $y_i$.</p>
 </blockquote>
-<p>$$<br>Var(\hat\beta_{i \ LSE}) \leq Var(\hat\beta_i)\[5pt]<br>E(\hat{\beta}_1)&#x3D;\beta_1 \<br>Var(\hat{\beta}<em>1)&#x3D;\frac{\sigma^2}{S</em>{xx}}<br>$$</p>
-</li>
+<script type="math/tex; mode=display">
+Var(\hat\beta_{i \ LSE}) \leq Var(\hat\beta_i)\\[5pt]
+E(\hat{\beta}_1)=\beta_1 \\
+Var(\hat{\beta}_1)=\frac{\sigma^2}{S_{xx}}</script></li>
 <li><h5 id="BLUE"><a href="#BLUE" class="headerlink" title="BLUE"></a>BLUE</h5><blockquote>
 <p><strong>best linear unbiased estimators</strong>, where“best” implies minimum variance when compared with all other unbiased estimators that are linear combinations of the $y_i$</p>
 </blockquote>
 </li>
 </ol>
-<h3 id="3-Alternate-Form-of-the-Model"><a href="#3-Alternate-Form-of-the-Model" class="headerlink" title="3. Alternate Form of the Model"></a>3. Alternate Form of the Model</h3><p>​			<img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162033586.png" alt="image-20230205162033586" style="zoom: 50%;" /></p>
-<p>​	</p>
+<h3 id="3-Alternate-Form-of-the-Model"><a href="#3-Alternate-Form-of-the-Model" class="headerlink" title="3. Alternate Form of the Model"></a>3. Alternate Form of the Model</h3><p>​            <img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205162033586.png" alt="image-20230205162033586" style="zoom: 50%;" /></p>
+<p>​    </p>
 <h3 id="4-Hypothesis-Testing-of-SLR"><a href="#4-Hypothesis-Testing-of-SLR" class="headerlink" title="4. Hypothesis Testing of SLR"></a>4. Hypothesis Testing of SLR</h3><h4 id="Testing-Significance-of-Regression-beta-1"><a href="#Testing-Significance-of-Regression-beta-1" class="headerlink" title="Testing Significance of Regression ($\beta_1$)"></a>Testing Significance of Regression ($\beta_1$)</h4><ul>
 <li><p>Hypothesis : <img src="C:\Users\86158\AppData\Roaming\Typora\typora-user-images\image-20230205163637413.png" alt="image-20230205163637413" style="zoom: 33%;" /></p>
 </li>
 <li><p>reject or not:</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163739073.png" alt="image-20230205163739073" style="zoom:50%;" />
-
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163751962.png" alt="image-20230205163751962" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163739073.png" alt="image-20230205163739073" style="zoom:50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163751962.png" alt="image-20230205163751962" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>Procedure to achieve:</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163817631.png" alt="image-20230205163817631" style="zoom:50%;" /></blockquote>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205163817631.png" alt="image-20230205163817631" style="zoom:50%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h5 id="1-T-test"><a href="#1-T-test" class="headerlink" title="1. T-test"></a>1. T-test</h5><blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162933477.png" alt="image-20230205162933477" style="zoom: 67%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205162933477.png" alt="image-20230205162933477" style="zoom: 67%;" /></p>
 </blockquote>
 <h5 id="2-Analysis-of-variance-ANOVA-For-F-test"><a href="#2-Analysis-of-variance-ANOVA-For-F-test" class="headerlink" title="2. Analysis of variance (ANOVA) (For F test)"></a>2. Analysis of variance (ANOVA) (For F test)</h5><ul>
-<li><p>Fundamental ANOVA identity<br>$$<br>\sum^n_{i&#x3D;1}(y_i-\bar y_i)^2 &#x3D; \sum^n_{i&#x3D;1}(\hat y_i-\bar y_i)^2 + \sum^n_{i&#x3D;1}(y_i-\hat y_i)^2 \[6pt]<br>SS_T &#x3D; SS_R + SS_{Res}<br>$$</p>
-</li>
+<li><p>Fundamental ANOVA identity</p>
+<script type="math/tex; mode=display">
+\sum^n_{i=1}(y_i-\bar y_i)^2 = \sum^n_{i=1}(\hat y_i-\bar y_i)^2 + \sum^n_{i=1}(y_i-\hat y_i)^2 \\[6pt]
+SS_T = SS_R + SS_{Res}</script></li>
 <li><p>Additional formula</p>
 <ul>
 <li><p>Total sum of squares : $SS_T$</p>
@@ -488,117 +534,131 @@
 <p>variation around mean</p>
 </blockquote>
 </li>
-<li><p>Regression&#x2F;Model sum of squares : $SS_R$</p>
+<li><p>Regression/Model sum of squares : $SS_R$</p>
 <blockquote>
 <p>variation between regression line and mean</p>
 </blockquote>
 </li>
-<li><p>Residual&#x2F;Error sum of squares : $SS_{Res}$</p>
+<li><p>Residual/Error sum of squares : $SS_{Res}$</p>
 <blockquote>
 <p>variation around regression line</p>
 </blockquote>
 </li>
 </ul>
-<p>$$<br>SS_T &#x3D;\sum^n_{i&#x3D;1}(y_i-\bar y_i)^2 \<br>SS_R&#x3D;\sum_{i&#x3D;1}^n(\hat{y}<em>i-\bar{y})^2&#x3D;\hat\beta_1S</em>{xy}\<br>SS_{Res}&#x3D;\sum_{i&#x3D;1}^n (y_i-\hat{y}_i)^2\<br>$$</p>
+<script type="math/tex; mode=display">
+SS_T =\sum^n_{i=1}(y_i-\bar y_i)^2 \\
+SS_R=\sum_{i=1}^n(\hat{y}_i-\bar{y})^2=\hat\beta_1S_{xy}\\
+SS_{Res}=\sum_{i=1}^n (y_i-\hat{y}_i)^2\\</script></li>
+<li><p>degree of freedom</p>
+<script type="math/tex; mode=display">
+df_T=df_R+df_{Res}\\
+df_T = n-1\\
+df_R = 1\\
+df_{Res} = n-2</script><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205170235401.png" alt="image-20230205170235401" style="zoom:50%;" /></p>
 </li>
-<li><p>degree of freedom<br>$$<br>df_T&#x3D;df_R+df_{Res}\<br>df_T &#x3D; n-1\<br>df_R &#x3D; 1\<br>df_{Res} &#x3D; n-2<br>$$</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205170235401.png" alt="image-20230205170235401" style="zoom:50%;" />
+<li><p><strong>ANOVA table </strong></p>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205170447760.png" alt="image-20230205170447760" style="zoom: 50%;" /></p>
 </li>
-<li><p>**ANOVA table **</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205170447760.png" alt="image-20230205170447760" style="zoom: 50%;" /></li>
 </ul>
 <h5 id="3-difference-between-t-and-f"><a href="#3-difference-between-t-and-f" class="headerlink" title="3. difference between t and f"></a>3. difference between t and f</h5><blockquote>
 <p><strong>t</strong> could used for <strong>one-side</strong> hypothese</p>
 </blockquote>
-<p>$$<br>t^2_0 &#x3D; \frac{\hat \beta_1^2 S_{xx}}{MS_{Res}}&#x3D;\frac{\hat \beta_1S_{xy}}{MS_{Res}} &#x3D; \frac{MS_R}{MS_{Res}}&#x3D;F_0<br>$$</p>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185329231.png" alt="image-20230205185329231" style="zoom:50%;" />
-
-<h3 id="5-Coefficient-of-Determination"><a href="#5-Coefficient-of-Determination" class="headerlink" title="5. Coefficient of Determination"></a>5. Coefficient of Determination</h3><p>$$<br>R^2 &#x3D; \frac{SS_R}{SS_T} &#x3D; 1 - \frac{SS_{Res}}{SS_T} ,\quad R \in (0,1)<br>$$</p>
-<ul>
+<script type="math/tex; mode=display">
+t^2_0 = \frac{\hat \beta_1^2 S_{xx}}{MS_{Res}}=\frac{\hat \beta_1S_{xy}}{MS_{Res}} = \frac{MS_R}{MS_{Res}}=F_0</script><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205185329231.png" alt="image-20230205185329231" style="zoom:50%;" /></p>
+<h3 id="5-Coefficient-of-Determination"><a href="#5-Coefficient-of-Determination" class="headerlink" title="5. Coefficient of Determination"></a>5. Coefficient of Determination</h3><script type="math/tex; mode=display">
+R^2 = \frac{SS_R}{SS_T} = 1 - \frac{SS_{Res}}{SS_T} ,\quad R \in (0,1)</script><ul>
 <li><p>remark</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204234762.png" alt="image-20230205204234762" style="zoom:50%;" />
-
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204243510.png" alt="image-20230205204243510" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204234762.png" alt="image-20230205204234762" style="zoom:50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204243510.png" alt="image-20230205204243510" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>Cautions in using $R^2$</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204325384.png" alt="image-20230205204325384" style="zoom:50%;" />
-
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204344911.png" alt="image-20230205204344911" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204325384.png" alt="image-20230205204325384" style="zoom:50%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204344911.png" alt="image-20230205204344911" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>some misconceptions</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204359247.png" alt="image-20230205204359247" style="zoom: 50%;" /></blockquote>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205204359247.png" alt="image-20230205204359247" style="zoom: 50%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h3 id="6-Abuse-of-regression"><a href="#6-Abuse-of-regression" class="headerlink" title="6. Abuse of regression"></a>6. Abuse of regression</h3><ul>
 <li><h4 id=""><a href="#" class="headerlink" title=""></a><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205732509.png" style="zoom: 33%;" /></h4></li>
-<li><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205706418.png" alt="image-20230205205706418" style="zoom: 33%;" />
+<li><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205706418.png" alt="image-20230205205706418" style="zoom: 33%;" /></p>
 </li>
-<li><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205848392.png" alt="image-20230205205848392" style="zoom:33%;" />
+<li><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205848392.png" alt="image-20230205205848392" style="zoom:33%;" /></p>
 </li>
-<li><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205905237.png" alt="image-20230205205905237" style="zoom:50%;" />
+<li><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205205905237.png" alt="image-20230205205905237" style="zoom:50%;" /></p>
 </li>
-<li><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205210012718.png" alt="image-20230205210012718" style="zoom:33%;" /></li>
+<li><p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205210012718.png" alt="image-20230205210012718" style="zoom:33%;" /></p>
+</li>
 </ul>
 <h3 id="7-Regression-from-the-Origin"><a href="#7-Regression-from-the-Origin" class="headerlink" title="7. Regression from the Origin"></a>7. Regression from the Origin</h3><h4 id="7-1-Building-up-model"><a href="#7-1-Building-up-model" class="headerlink" title="7.1 Building up model"></a>7.1 Building up model</h4><ol>
-<li><p>SLR model<br>$$<br>y &#x3D; \beta_1x + \varepsilon<br>$$</p>
-</li>
+<li><p>SLR model</p>
+<script type="math/tex; mode=display">
+y = \beta_1x + \varepsilon</script></li>
 <li><p>Assumtions</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205210650162.png" alt="image-20230205210650162" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205210650162.png" alt="image-20230205210650162" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>estimate for $\beta_1$</p>
 <ul>
 <li><p>process : </p>
 <blockquote>
-<p>By Least-squares function<br>$$<br>S(\beta_1) &#x3D; SS_{Res} &#x3D; \sum^n_{i&#x3D;1} \varepsilon_i^2 &#x3D; \sum^n_{i&#x3D;1}(y_i-\beta_1x_i)^2<br>$$<br>we could get <strong>least-squares normal equation</strong><br>$$<br>\hat \beta_1 \sum^n_{i&#x3D;1}x^2_i &#x3D; \sum^n_{i&#x3D;1}y_i x_i<br>$$</p>
-</blockquote>
+<p>By Least-squares function</p>
+<script type="math/tex; mode=display">
+S(\beta_1) = SS_{Res} = \sum^n_{i=1} \varepsilon_i^2 = \sum^n_{i=1}(y_i-\beta_1x_i)^2</script><p>we could get <strong>least-squares normal equation</strong></p>
+<script type="math/tex; mode=display">
+\hat \beta_1 \sum^n_{i=1}x^2_i = \sum^n_{i=1}y_i x_i</script></blockquote>
 </li>
-<li><p>solution<br>$$<br>\hat{\beta}<em>1&#x3D;\frac{S</em>{x y}}{S_{x x}}&#x3D;\left(\frac{S_{x y} &#x2F; n}{S_{x x} &#x2F; n}\right)<br>$$</p>
-</li>
-<li><p>additional formula<br>$$<br>S_{x y}&#x3D;\sum_{i&#x3D;1}^n y_ix_i\[6pt]<br>S_{x x}&#x3D;x_i^2<br>$$</p>
-</li>
+<li><p>solution</p>
+<script type="math/tex; mode=display">
+\hat{\beta}_1=\frac{S_{x y}}{S_{x x}}=\left(\frac{S_{x y} / n}{S_{x x} / n}\right)</script></li>
+<li><p>additional formula</p>
+<script type="math/tex; mode=display">
+S_{x y}=\sum_{i=1}^n y_ix_i\\[6pt]
+S_{x x}=x_i^2</script></li>
 </ul>
 </li>
-<li><p>estimation for $\sigma^2$<br>$$<br>\sigma^2 &#x3D; MS_{Res} &#x3D; \frac{SS_{Res}}{n-1} &#x3D; \frac{S_{yy}-\hat \beta_1 S_{xy}}{n-1}<br>$$</p>
-</li>
+<li><p>estimation for $\sigma^2$</p>
+<script type="math/tex; mode=display">
+\sigma^2 = MS_{Res} = \frac{SS_{Res}}{n-1} = \frac{S_{yy}-\hat \beta_1 S_{xy}}{n-1}</script></li>
 </ol>
 <h4 id="7-2-Cautions-for-Regression-through-Origin"><a href="#7-2-Cautions-for-Regression-through-Origin" class="headerlink" title="7.2 Cautions for Regression through Origin"></a>7.2 Cautions for Regression through Origin</h4><ul>
 <li><p>misusing model</p>
 <blockquote>
- <img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205211804931.png" alt="image-20230205211804931" style="zoom: 33%;" />
+<p> <img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205211804931.png" alt="image-20230205211804931" style="zoom: 33%;" /></p>
 </blockquote>
 </li>
 <li><p>sum of residual may $\neq 0$</p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205211931729.png" alt="image-20230205211931729" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205211931729.png" alt="image-20230205211931729" style="zoom:50%;" /></p>
 </blockquote>
 </li>
 <li><p>$R^2$ may invalid</p>
 <p><strong>Mostly, we use $MS_{Res}$ to compare intercept and no-intercept models</strong></p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212204096.png" alt="image-20230205212204096" style="zoom: 33%;" />
-
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212217122.png" alt="image-20230205212217122" style="zoom: 33%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212204096.png" alt="image-20230205212204096" style="zoom: 33%;" /></p>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212217122.png" alt="image-20230205212217122" style="zoom: 33%;" /></p>
 </blockquote>
 <p>Therefore, we also can define $R_0^2$ : </p>
 <blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212335528.png" alt="image-20230205212335528" style="zoom:50%;" /></blockquote>
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212335528.png" alt="image-20230205212335528" style="zoom:50%;" /></p>
+</blockquote>
 </li>
 </ul>
 <h3 id="8-Mstimation-by-Maximum-Likelihood"><a href="#8-Mstimation-by-Maximum-Likelihood" class="headerlink" title="8. Mstimation by Maximum Likelihood"></a>8. Mstimation by Maximum Likelihood</h3><h4 id="8-1-Methodology"><a href="#8-1-Methodology" class="headerlink" title="8.1 Methodology"></a>8.1 Methodology</h4><blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212619998.png" alt="image-20230205212619998" style="zoom:33%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212619998.png" alt="image-20230205212619998" style="zoom:33%;" /></p>
 </blockquote>
 <h4 id="8-2-Maximum-Likelihood-estimators-MLE"><a href="#8-2-Maximum-Likelihood-estimators-MLE" class="headerlink" title="8.2 Maximum Likelihood estimators (MLE)"></a>8.2 Maximum Likelihood estimators (MLE)</h4><blockquote>
-<img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212657312.png" alt="image-20230205212657312" style="zoom:50%;" />
+<p><img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212657312.png" alt="image-20230205212657312" style="zoom:50%;" /></p>
 </blockquote>
 <h4 id="8-3-Comparison-between-LSE-and-MLE"><a href="#8-3-Comparison-between-LSE-and-MLE" class="headerlink" title="8.3 Comparison between LSE and MLE"></a>8.3 Comparison between LSE and MLE</h4><blockquote>
- <img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212737633.png" alt="image-20230205212737633" style="zoom:50%;" />
+<p> <img src="https://raw.githubusercontent.com/Error2333/mdimage/main/imageimage-20230205212737633.png" alt="image-20230205212737633" style="zoom:50%;" /></p>
 </blockquote>
 
     </div>
